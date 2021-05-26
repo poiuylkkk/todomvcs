@@ -78,6 +78,7 @@ export default {
         id: Date.now(),
         title: name,
         isDone: false,
+        date: new Date(),
       })
     },
     yesFn(id, title) {

@@ -21,7 +21,6 @@
           />
           <label @dblclick="edit(item.id, item.title)">{{ item.title }}</label>
           <button class="destroy" @click="del(item.id)"></button>
-          <div class="time">{{ item.date | timeHandler }}</div>
         </div>
         <input class="edit" v-model="editName" />
       </li>
@@ -30,7 +29,6 @@
 </template>
 
 <script>
-import moment from 'moment'
 export default {
   props: {
     list: {
@@ -77,11 +75,6 @@ export default {
       editName: '',
       theTotal: false,
     }
-  },
-  filters: {
-    timeHandler(value) {
-      return moment(value).format('YYYY-MM-DD HH:mm:ss')
-    },
   },
 }
 </script>
